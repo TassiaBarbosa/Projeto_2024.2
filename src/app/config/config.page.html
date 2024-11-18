@@ -1,0 +1,74 @@
+<ion-header >
+  <ion-toolbar class="header">
+
+    <img src="assets/NerdSphera.svg" id="logo" alt="NerdSphera Logo" />
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start"> 
+      <ion-toggle (ionChange)="toggleDarkTheme($event.detail.checked)" mode="md">
+      </ion-toggle> 
+    </ion-buttons> 
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div id="config-container">
+    <h1>Configurações</h1>
+
+    <div [ngClass]="currentFont" id="alt_font"> 
+      <h2>Alterar Fonte</h2> 
+
+        <ion-button (click)="changeFont('font-default')" fill="clear">
+          Fonte Padrão</ion-button> 
+        <ion-button (click)="changeFont('font-alternativa')" fill="clear">
+          Fonte Alternativa</ion-button> 
+        <ion-button (click)="changeFont('font-customizada')" fill="clear">
+          Fonte Customizada</ion-button>
+    </div>
+    
+    <div [ngClass]="currentFontSizeClass" id="alt_size"> 
+      <h2>Tamanho da Fonte</h2> 
+      <p>Este é um exemplo de texto com tamanho de fonte alterável.</p> 
+
+      <ion-button (click)="changeFontSize('font-small')" fill="clear">
+        Pequeno</ion-button> 
+      <ion-button (click)="changeFontSize('font-medium')" fill="clear">
+        Médio</ion-button> 
+      <ion-button (click)="changeFontSize('font-large')" fill="clear">
+        Grande</ion-button> 
+      <ion-button (click)="changeFontSize('font-xlarge')" fill="clear">
+        Muito Grande</ion-button> 
+    </div>
+
+    <div [ngClass]="currentContrastClass" id="alt_contrast"> 
+      <h2>Contraste da Fonte</h2> 
+      <p>Este é um exemplo de texto com contraste de fonte alterável.</p>
+      <ion-button (click)="changeContrast('contrast-high')" fill="clear">
+        Contraste Alto</ion-button> 
+      <ion-button (click)="changeContrast('contrast-medium')" fill="clear">
+        Contraste Médio</ion-button> 
+      <ion-button (click)="changeContrast('contrast-low')" fill="clear">
+        Contraste Baixo</ion-button> 
+    </div>
+  </div>
+
+  <ion-button expand="full" class="transparent-button" routerLink="/home">
+    <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
+    Voltar
+  </ion-button>
+
+</ion-content>
+
+
+
+
+
