@@ -11,11 +11,6 @@ export class PerfilPage implements OnInit {
   constructor() { }
   ngOnInit() {
   }
-
-  /*método do modo escuro */
-  toggleDarkTheme(shouldAdd: boolean) { 
-    document.body.classList.toggle('dark-theme', shouldAdd); 
-  }
 }
 
 
