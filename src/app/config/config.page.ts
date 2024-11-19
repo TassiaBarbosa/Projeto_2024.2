@@ -12,11 +12,6 @@ export class ConfigPage implements OnInit {
   ngOnInit() {
   }
 
-  /*método do modo escuro */
-  toggleDarkTheme(shouldAdd: boolean) { 
-    document.body.classList.toggle('dark-theme', shouldAdd); 
-  }
-
   /*método para mudar a fonte */
   public currentFont: string = 'font-default';
   changeFont(fontClass: string) {
