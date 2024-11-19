@@ -10,11 +10,6 @@
       <ion-button>
         <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
       </ion-button>
-    </ion-buttons>
-
-    <ion-buttons slot="start"> 
-      <ion-toggle (ionChange)="toggleDarkTheme($event.detail.checked)" mode="md">
-      </ion-toggle> 
     </ion-buttons> 
 
   </ion-toolbar>
@@ -26,7 +21,6 @@
 
     <div [ngClass]="currentFont" id="alt_font"> 
       <h2>Alterar Fonte</h2> 
-
         <ion-button (click)="changeFont('font-default')" fill="clear">
           Fonte Padrão</ion-button> 
         <ion-button (click)="changeFont('font-alternativa')" fill="clear">
