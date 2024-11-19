@@ -11,12 +11,6 @@ export class PerfilConfigPage implements OnInit {
 
   ngOnInit() {
   }
-
-  /*método do modo escuro */
-  toggleDarkTheme(shouldAdd: boolean) { 
-    document.body.classList.toggle('dark-theme', shouldAdd); 
-  }
-
 }
 
 /*modelo com os metodos de acessar a câmera e o armazenamento do dispositivo (consertar e substituir por este)
