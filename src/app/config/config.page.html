@@ -5,13 +5,15 @@
 
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+        <ion-icon slot="icon-only" name="search-outline" color="light"></ion-icon>
       </ion-button>
-      <ion-button>
-        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons> 
+    </ion-buttons>
 
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -20,40 +22,53 @@
     <h1>Configurações</h1>
 
     <div [ngClass]="currentFont" id="alt_font"> 
-      <h2>Alterar Fonte</h2> 
-        <ion-button (click)="changeFont('font-default')" fill="clear">
-          Fonte Padrão</ion-button> 
-        <ion-button (click)="changeFont('font-alternativa')" fill="clear">
-          Fonte Alternativa</ion-button> 
-        <ion-button (click)="changeFont('font-customizada')" fill="clear">
-          Fonte Customizada</ion-button>
+      <h3>Alterar Fonte</h3>
+      <p>Este é um exemplo de texto com contraste de fonte alterável.</p>  
+    
+        <ion-buttons>
+          <ion-button (click)="changeFont('font-default')" fill="outline">
+            Fonte Padrão</ion-button> 
+          <ion-button (click)="changeFont('font-alternativa')" fill="outline">
+            Fonte Alternativa</ion-button> 
+          <ion-button (click)="changeFont('font-customizada')" fill="outline">
+            Fonte Customizada</ion-button>
+        </ion-buttons>
     </div>
     
-    <div [ngClass]="currentFontSizeClass" id="alt_size"> 
-      <h2>Tamanho da Fonte</h2> 
-      <p>Este é um exemplo de texto com tamanho de fonte alterável.</p> 
-
-      <ion-button (click)="changeFontSize('font-small')" fill="clear">
-        Pequeno</ion-button> 
-      <ion-button (click)="changeFontSize('font-medium')" fill="clear">
-        Médio</ion-button> 
-      <ion-button (click)="changeFontSize('font-large')" fill="clear">
-        Grande</ion-button> 
-      <ion-button (click)="changeFontSize('font-xlarge')" fill="clear">
-        Muito Grande</ion-button> 
+    <div [ngClass]="currentFontSizeClass" id="alt_size">
+        <h3>Tamanho da Fonte</h3> 
+        <p>Este é um exemplo de texto com tamanho de fonte alterável.</p>  
+      
+      <ion-buttons>
+        <ion-button (click)="changeFontSize('size-small')" fill="outline">
+          Pequeno</ion-button> 
+        <ion-button (click)="changeFontSize('size-default')" fill="outline">
+          Médio</ion-button> 
+        <ion-button (click)="changeFontSize('size-large')" fill="outline">
+          Grande</ion-button> 
+        <ion-button (click)="changeFontSize('size-xlarge')" fill="outline">
+          Muito Grande</ion-button>
+      </ion-buttons>
     </div>
 
-    <div [ngClass]="currentContrastClass" id="alt_contrast"> 
-      <h2>Contraste da Fonte</h2> 
-      <p>Este é um exemplo de texto com contraste de fonte alterável.</p>
-      <ion-button (click)="changeContrast('contrast-high')" fill="clear">
-        Contraste Alto</ion-button> 
-      <ion-button (click)="changeContrast('contrast-medium')" fill="clear">
-        Contraste Médio</ion-button> 
-      <ion-button (click)="changeContrast('contrast-low')" fill="clear">
-        Contraste Baixo</ion-button> 
+    <div [ngClass]="currentContrastClass" id="alt_contrast">
+        <h3>Contraste da Fonte</h3> 
+        <p>Este é um exemplo de texto com contraste de fonte alterável.</p>  
+      
+      <ion-buttons>
+        <ion-button (click)="changeContrast('contrast-low')" fill="outline">
+          Baixo</ion-button>
+        <ion-button (click)="changeContrast('contrast-medium')" fill="outline">
+          Médio</ion-button>
+        <ion-button (click)="changeContrast('contrast-high')" fill="outline">
+          Alto</ion-button> 
+        <ion-button (click)="changeContrast('contrast-default')" fill="outline">
+          Padrão</ion-button>
+      </ion-buttons>
     </div>
   </div>
+
+  <ion-button (click)="salvarConfig()" >Salvar configurações</ion-button>
 
   <ion-button expand="full" class="transparent-button" routerLink="/home">
     <ion-icon name="arrow-back-outline" slot="start"></ion-icon>
