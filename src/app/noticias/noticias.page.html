@@ -1,8 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>noticias</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -10,4 +5,9 @@
       <ion-title size="large">noticias</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div [class]="currentFont" [ngClass]="[currentFontSizeClass, currentContrastClass]">
+    Seu conteúdo aqui.
+  </div>
+  
 </ion-content>
